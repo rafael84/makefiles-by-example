@@ -117,3 +117,9 @@ endef
 $(error $(MSG))
 endif
 ```
+
+## More examples
+
+* The sample [Makefile](./Makefile) in this repo;
+* This [Makefile](https://github.com/rafael84/vim/blob/master/Makefile) for my vim setup;
+* A [Makefile](https://github.com/rafael84/shortener/blob/master/Makefile) for a Go project.
