@@ -15,6 +15,7 @@ check-enabled:
 
 say-my-name-%:
 	@echo Hello $*!
+	@echo Command $@!
 
 CURRENT_TIME = $(shell date)
 

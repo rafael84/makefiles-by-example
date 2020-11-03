@@ -5,22 +5,23 @@ The basic structure of a Makefile is as follows:
 ```Makefile
 dependency-one:
     command1
-
-dependency-two:
     command2
 
-end-goal: dependency-one dependency-two
+dependency-two:
     command3
+
+end-goal: dependency-one dependency-two
     command4
+    command5
     # ...
     commandN
 ```
 
 When you invoke `make end-goal`, the following would happen:
 
-* dependency-one (command1)
-* dependency-two (command2)
-* end-goal (commandN)
+* dependency-one (command1, command2)
+* dependency-two (command3)
+* end-goal (command4, command5, commandN)
 
 ## Basic stuff
 
@@ -92,6 +93,7 @@ NOW = $(shell date)
 
 ## `define` and `call`
 ```Makefile
+define print_title
 echo -----------------
 echo $(1)
 echo -----------------
