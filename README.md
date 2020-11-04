@@ -49,6 +49,18 @@ ninja:
     @echo ""
 ```
 
+NOTE: The `@` does not need to be right before the command name; the next example works just fine, as the previous one:
+```Makefile
+lazy-ninja:
+    @       echo ""
+```
+
+If, for some reason, you need to check what command would be executed, just invoke the `make` with the `-n` option, like this:
+
+```sh
+make -n lazy-ninja
+```
+
 ### `%`, `$*` and `$@`
 ```Makefile
 say-my-name-%:
